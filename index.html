@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrinho 2026 - Agro Forte, Futuro Sustentável</title>
+    <style>
+        /* Configurações Globais e Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            /* Degradê verde moderno combinando campo e tecnologia */
+            background: linear-gradient(135deg, #1e4620 0%, #2d7a4d 50%, #56ab2f 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        /* Cabeçalho */
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(5px);
+            border-bottom: 2px solid #a8ff78;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #a8ff78;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        header p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+            font-weight: 300;
+        }
+
+        /* Container Principal */
+        main {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        /* Seção do Problema e Solução */
+        .painel-info {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+        }
+
+        .painel-info h2 {
+            color: #a8ff78;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+        }
+
+        /* Área Interativa do Simulador de IA */
+        .simulador-container {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            border: 2px solid #a8ff78;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+        }
+
+        .simulador-container h2 {
+            text-align: center;
+            color: #ffffff;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .controles {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        @media (max-width: 600px) {
+            .controles {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .campo-controle {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .campo-controle label {
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #a8ff78;
+        }
+
+        .campo-controle select {
+            padding: 12px;
+            border-radius: 8px;
+            border: none;
+            background: #ffffff;
+            color: #1e4620;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* Botão Interativo */
+        .btn-analisar {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(90deg, #a8ff78 0%, #78ffd6 100%);
+            border: none;
+            border-radius: 8px;
+            color: #1e4620;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .btn-analisar:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(168, 255, 120, 0.4);
+        }
+
+        /* Tela de Resposta da IA */
+        .resultado-ia {
+            margin-top: 25px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.4);
+            border-left: 5px solid #a8ff78;
+            border-radius: 4px;
+            display: none; /* Escondido até o clique */
+        }
+
+        .resultado-ia h3 {
+            color: #78ffd6;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Rodapé */
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 50px;
+            background: rgba(0, 0, 0, 0.3);
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Concurso Agrinho 2026</h1>
+        <p><strong>Tema:</strong> "Agro forte, futuro sustentável: equilíbrio entre produção e meio ambiente"</p>
+    </header>
+
+    <main>
+        <section class="painel-info">
+            <h2>Tecnologia Pulando Barreiras: O Projeto ECO-IA</h2>
+            <p>
+                <strong>O Problema:</strong> O desperdício de recursos como água e defensivos agrícolas afeta o meio ambiente e encarece a produção. Como equilibrar a alta produtividade com a conservação ambiental?
+            </p>
+            <br>
+            <p>
+                <strong>A Solução Digital:</strong> Criamos uma interface simuladora de <strong>Inteligência Artificial (IA)</strong>. O sistema analisa dados de sensores de umidade do solo e imagens de satélite, indicando ações precisas que economizam recursos, combatem pragas com o menor impacto possível e garantem a qualidade de vida.
+            </p>
+        </section>
+
+        <section class="simulador-container">
+            <h2>Simulador de Diagnóstico por IA</h2>
+            
+            <div class="controles">
+                <div class="campo-controle">
+                    <label for="umidade">Umidade do Solo:</label>
+                    <select id="umidade">
+                        <option value="baixa">Baixa (Solo Seco)</option>
+                        <option value="ideal">Ideal (Solo Úmido)</option>
+                        <option value="alta">Alta (Solo Encharcado)</option>
+                    </select>
+                </div>
+
+                <div class="campo-controle">
+                    <label for="AnaliseVisual">Análise Visual da Plantação:</label>
+                    <select id="AnaliseVisual">
+                        <option value="saudavel">Folhas Verdes e Saudáveis</option>
+                        <option value="manchas">Presença de Manchas (Possível Praga)</option>
+                        <option value="amareladas">Folhas Amareladas (Falta de Nutrientes)</option>
+                    </select>
+                </div>
+            </div>
+
+            <button class="btn-analisar" onclick="processarDadosIA()">Iniciar Análise da IA</button>
+
+            <div id="painelResultado" class="resultado-ia">
+                <h3>🤖 Diagnóstico da Inteligência Artificial:</h3>
+                <p id="textoResultado"></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Projeto Desenvolvido para a Categoria Programação - Agrinho 2026</p>
+        <p>Equilíbrio entre produção e meio ambiente.</p>
+    </footer>
+
+    <script>
+        function processarDadosIA() {
+            // Captura os valores selecionados nos elementos de tela
+            const umidade = document.getElementById('umidade').value;
+            const visual = document.getElementById('AnaliseVisual').value;
+            const painel = document.getElementById('painelResultado');
+            const texto = document.getElementById('textoResultado');
+
+            let recomendacao = "";
+
+            // Lógica de Inteligência Artificial Simulada baseada nas combinações
+            if (umidade === "baixa" && visual === "saudavel") {
+                recomendacao = "🚨 <strong>Ação Sustentável:</strong> Solo seco detectado. Ativando irrigação localizada em gota-a-gota para economizar 40% de água.";
+            } else if (umidade === "ideal" && visual === "saudavel") {
+                recomendacao = "✅ <strong>Equilíbrio Perfeito:</strong> Plantação em excelente estado. Condições de solo e folhagem ideais. Nenhuma intervenção química ou hídrica necessária.";
+            } else if (visual === "manchas") {
+                recomendacao = "🛡️ <strong>Manejo Integrado de Pragas:</strong> Alerta de praga inicial. Recomendamos a aplicação de defensivo biológico natural estritamente na área afetada, preservando os polinizadores locais.";
+            } else if (umidade === "alta") {
+                recomendacao = "⚠️ <strong>Aviso de Desperdício:</strong> Solo excessivamente úmido. Desligando sistemas de irrigação automática para evitar o escoamento de nutrientes e erosão do solo.";
+            } else if (visual === "amareladas") {
+                recomendacao = "🌱 <strong>Nutrição Inteligente:</strong> Detectada carência de nutrientes. Recomendado o uso de adubação verde ou composto orgânico para recuperar o solo sem agredir os lençóis freáticos.";
+            } else {
+                recomendacao = "🌾 Dados analisados. Mantenha o monitoramento constante para assegurar a sustentabilidade do campo.";
+            }
+
+            // Exibe a caixinha com o resultado gerado
+            texto.innerHTML = recomendacao;
+            painel.style.display = "block";
+        }
+    </script>
+</body>
+</html>
